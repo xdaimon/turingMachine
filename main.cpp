@@ -1,6 +1,15 @@
 #include <iostream>
 using namespace std;
 #include <string>
+// Example inputs
+// Tape = 000000000000
+// InitialPos = 4
+// Machine = 111111
+//           wmswms
+//           w = write (0,1)
+//           r = move (0,1)
+//           s = new state (0=halt, 1-n)
+//
 int main() {
 	string T,M;
 	int r,s=0,I=0;
@@ -16,7 +25,7 @@ int main() {
 		T[I]=M[s*6+r*3+0];
 		I+=(M[s*6+r*3+1]-'0')*2-1;
 		s=M[s*6+r*3+2]-'0'-1;
-	} while(s>=0&&I>=0&&I<T.size()&&s<M.size());
+	} while(s>=0&&s<M.size()&&I>=0&&I<T.size());
 	cout<<T<<endl;
 	for(int i=0;i<I;++i) cout<<" ";
 	cout<<"^"<<s+1<<endl;
