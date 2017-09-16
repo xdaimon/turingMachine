@@ -10,7 +10,7 @@ using namespace std;
 //           m = move (0,1)
 //           s = new state (0=halt, 1-n)
 //           {111}100 -> state = 1, read = 0: write 1, move right, set state 1
-//           111{100} -> state = 1, read = 1: move left, set state 0 = halt
+//           111{100} -> state = 1, read = 1: write 1, move left, set state 0 = halt
 //
 int main() {
 	string T,M;
