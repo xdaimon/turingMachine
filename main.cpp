@@ -4,11 +4,13 @@ using namespace std;
 // Example inputs
 // Tape = 000000000000
 // InitialPos = 4
-// Machine = 111111
+// Machine = 111100
 //           wmswms
 //           w = write (0,1)
-//           r = move (0,1)
+//           m = move (0,1)
 //           s = new state (0=halt, 1-n)
+//           {111}100 -> state = 1, read = 0: write 1, move right, set state 1
+//           111{100} -> state = 1, read = 1: move left, set state 0 = halt
 //
 int main() {
 	string T,M;
